@@ -4,7 +4,7 @@
   <input name="pass" type="text" [(ngModel)]="password">
 </div>
 <ul>
-  <li *ngFor="let item of log" [ngStyle]="{'color' : log.indexOf(item) >=5 ? 'white' : 'black' }" [ngClass]="{'blue-log' : log.indexOf(item) >= 5}">
+  <li *ngFor="let item of log; let indx = index" [ngStyle]="{'color' : indx >= 5 ? 'white' : 'black' }" [ngClass]="{'blue-log' : indx >= 5}">
     {{ item }}
   </li>
 </ul>
