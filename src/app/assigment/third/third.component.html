@@ -1,0 +1,10 @@
+<button class="btn btn-primary" (click)="onShowClick()">Display details</button>
+<div *ngIf="visible">
+  <label for="pass">Password</label>
+  <input name="pass" type="text" [(ngModel)]="password">
+</div>
+<ul>
+  <li *ngFor="let item of log" [ngStyle]="{'color' : log.indexOf(item) >=5 ? 'white' : 'black' }" [ngClass]="{'blue-log' : log.indexOf(item) >= 5}">
+    {{ item }}
+  </li>
+</ul>
