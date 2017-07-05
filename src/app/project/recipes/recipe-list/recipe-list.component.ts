@@ -1,3 +1,4 @@
+import { Recipe } from './../recipe.model';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,6 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./recipe-list.component.css']
 })
 export class RecipeListComponent implements OnInit {
+  recipes: Recipe[] = [
+    new Recipe(
+      'First Test Recipe',
+      'This is simply a test',
+      'http://www.seriouseats.com/images/2015/09/20150914-pressure-cooker-recipes-roundup-09.jpg'),
+    new Recipe(
+      'Second Test Recipe',
+      'It\'s a test too',
+      'http://www.pragueangkor.com/sites/default/files/imagecache/Stranky-Obsah/pages/obsah/about-food-and-best-dishes/best-dish-008.jpg')
+  ];
 
   constructor() { }
 
