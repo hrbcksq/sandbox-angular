@@ -13,9 +13,10 @@
   <button class="btn btn-default" (click)="onAdd()" type="button">Add</button>
   <button class="btn btn-default" (click)="onAddBlueprint()" type="button">Add Blueprint</button>
 </div>
+<button class="btn btn-primary" type="button" (click)="changeFirstElement()">Change first element</button>
+<button class="btn btn-danger" type="button" (click)="destroyFirstElement()">Destory first element</button>
 <div class="items-container">
-  <app-dashboard-item *ngFor="let item of list" [item]="item">
-    <p>Content</p>
+  <app-dashboard-item *ngFor="let item of list" [item]="item" [name]="item.name">
   </app-dashboard-item>
 </div>
 

@@ -1,6 +1,7 @@
 <div class="panel panel-default">
   <div class="panel-heading">
-    <strong>{{item.name}}</strong>
+    <!--<strong>{{item.name}}</strong>-->
+    <strong>{{name}}</strong>
   </div>
   <div class="panel-body" [ngClass]="{'blueprint': item.type}">{{item.data}}</div>
   <ng-content></ng-content>
