@@ -14,7 +14,9 @@
   <button class="btn btn-default" (click)="onAddBlueprint()" type="button">Add Blueprint</button>
 </div>
 <div class="items-container">
-  <app-dashboard-item *ngFor="let item of list" [item]="item"></app-dashboard-item>
+  <app-dashboard-item *ngFor="let item of list" [item]="item">
+    <p>Content</p>
+  </app-dashboard-item>
 </div>
 
 

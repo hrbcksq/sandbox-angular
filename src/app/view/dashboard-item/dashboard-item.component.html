@@ -3,4 +3,5 @@
     <strong>{{item.name}}</strong>
   </div>
   <div class="panel-body" [ngClass]="{'blueprint': item.type}">{{item.data}}</div>
+  <ng-content></ng-content>
 </div>
