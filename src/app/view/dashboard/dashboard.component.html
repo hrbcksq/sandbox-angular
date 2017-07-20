@@ -1,0 +1,20 @@
+<div>
+  <div class="form-group">
+    <label for="name">Server name</label>
+    <!--<input id="name" type="text" placeholder="Enter the name" [(ngModel)]="current.name" class="form-control">-->
+    <input #serverNameInput id="name" type="text" placeholder="Enter the name" [(ngModel)]="current.name" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="name">Server data</label>
+    <!--<input id="name" type="text" placeholder="Place for data" [(ngModel)]='current.data' class="form-control"> -->
+    <input #serverDataInput id="name" type="text" placeholder="Place for data" [(ngModel)]='current.data' class="form-control"> 
+    <!--<input #serverDataInput id="name" type="text" placeholder="Place for data" class="form-control"> -->
+  </div>
+  <button class="btn btn-default" (click)="onAdd(serverNameInput)" type="button">Add</button>
+  <button class="btn btn-default" (click)="onAddBlueprint()" type="button">Add Blueprint</button>
+</div>
+<div class="items-container">
+  <app-dashboard-item *ngFor="let item of list" [item]="item"></app-dashboard-item>
+</div>
+
+
