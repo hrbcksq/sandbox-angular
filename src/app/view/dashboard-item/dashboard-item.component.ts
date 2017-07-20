@@ -1,15 +1,17 @@
 import {
-  AfterContentChecked,
-  AfterContentInit,
-  Component,
-  DoCheck,
-  Input,
-  OnChanges,
-  OnInit,
-  SimpleChanges,
-  ViewEncapsulation,
-  AfterViewInit,
-  OnDestroy
+    AfterContentChecked,
+    AfterContentInit,
+    AfterViewInit,
+    Component,
+    DoCheck,
+    ElementRef,
+    Input,
+    OnChanges,
+    OnDestroy,
+    OnInit,
+    SimpleChanges,
+    ViewChild,
+    ViewEncapsulation
 } from '@angular/core';
 import { Server } from 'app/model/model.module';
 
@@ -22,11 +24,12 @@ import { Server } from 'app/model/model.module';
 export class DashboardItemComponent implements OnInit, OnChanges, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, OnDestroy {
   @Input() item: Server;
   @Input() name: string;
+  @ViewChild('name') nameElement: ElementRef;
 
   constructor() { }
 
   ngOnInit() {
-
+    console.log('Name elemenet content: ' + this.nameElement.nativeElement.textContent);
   }
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -40,6 +43,7 @@ export class DashboardItemComponent implements OnInit, OnChanges, DoCheck, After
 
   ngAfterContentInit(): void {
     console.log('After content init called');
+    console.log('Name elemenet content: ' + this.nameElement.nativeElement.textContent);
   }
 
   ngAfterContentChecked(): void {
@@ -52,6 +56,7 @@ export class DashboardItemComponent implements OnInit, OnChanges, DoCheck, After
 
   ngAfterViewInit(): void {
     console.log('After view init called');
+    console.log('Name elemenet content: ' + this.nameElement.nativeElement.textContent);
   }
 }
 
