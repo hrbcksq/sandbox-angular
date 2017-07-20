@@ -32,6 +32,7 @@ export class DashboardItemComponent implements OnInit, OnChanges, DoCheck, After
 
   ngOnInit() {
     console.log('Name elemenet content: ' + this.nameElement.nativeElement.textContent);
+    console.log('Content elemenet content: ' + this.content.nativeElement.textContent);
   }
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -46,6 +47,7 @@ export class DashboardItemComponent implements OnInit, OnChanges, DoCheck, After
   ngAfterContentInit(): void {
     console.log('After content init called');
     console.log('Name elemenet content: ' + this.nameElement.nativeElement.textContent);
+    console.log('Content elemenet content: ' + this.content.nativeElement.textContent);
   }
 
   ngAfterContentChecked(): void {

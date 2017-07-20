@@ -17,7 +17,7 @@
 <button class="btn btn-danger" type="button" (click)="destroyFirstElement()">Destory first element</button>
 <div class="items-container">
   <app-dashboard-item *ngFor="let item of list" [item]="item" [name]="item.name">
-    <div #content/>
+    <div #content> </div>
   </app-dashboard-item>
 </div>
 
