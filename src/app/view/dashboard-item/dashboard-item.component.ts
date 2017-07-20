@@ -3,6 +3,7 @@ import {
     AfterContentInit,
     AfterViewInit,
     Component,
+    ContentChild,
     DoCheck,
     ElementRef,
     Input,
@@ -25,6 +26,7 @@ export class DashboardItemComponent implements OnInit, OnChanges, DoCheck, After
   @Input() item: Server;
   @Input() name: string;
   @ViewChild('name') nameElement: ElementRef;
+  @ContentChild('content') content: ElementRef;
 
   constructor() { }
 
