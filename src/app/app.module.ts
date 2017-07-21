@@ -1,3 +1,5 @@
+import { GameService } from './assigment/components/game-service/game-service.service';
+import { GameModule } from './assigment/components/game/game.module';
 import { FormsModule } from '@angular/forms';
 import { DashboardItemModule } from './view/dashboard-item/dashboard-item.module';
 import { BrowserModule } from '@angular/platform-browser';
@@ -14,9 +16,10 @@ import { ServiceModule } from './service/service.module';
   imports: [
     BrowserModule,
     DashboardModule,
-    ServiceModule
+    ServiceModule,
+    GameModule
   ],
-  providers: [],
+  providers: [GameService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
