@@ -1,10 +1,18 @@
-
 <div class="container">
-    <div class="row">
-        <div class="col-xs-12">
-            <app-header></app-header>
-            <app-recipes></app-recipes>
-            <app-shopping-list></app-shopping-list>
-        </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <app-header (onNavigationChange)='onNavigation($event)'></app-header>
+      <span [ngSwitch]="currentNavigation">
+            <p *ngSwitchCase="NavigationType.Recipes">
+                <app-recipes></app-recipes>
+            </p>
+            <p *ngSwitchCase="NavigationType.Shopping">
+                <app-shopping-list></app-shopping-list>
+            </p>
+            <p *ngSwitchDefault>
+            
+            </p>
+        </span>
     </div>
+  </div>
 </div>
