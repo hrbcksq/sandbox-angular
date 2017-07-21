@@ -1,10 +1,10 @@
 
 import { EventEmitter } from 'events';
-import { Injectable, Output } from '@angular/core';
+import { Injectable } from '@angular/core';
 
 @Injectable()
 export class GameService {
-  @Output() onIndexUpdate = new EventEmitter();
+  onIndexUpdate = new EventEmitter();
   index = 0;
   interval = 1e3;
   timerInterval;
