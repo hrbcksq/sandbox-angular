@@ -1,11 +1,8 @@
-<p>
-  recipes works!
-</p>
 <div class="row">
   <div class="col-xs-5">
     <app-recipe-list (onSelectionChange)="setCurrentRecipe($event)"></app-recipe-list>
   </div>
   <div class="col-xs-5">
-    <app-recipe-detail [recipe]="current"></app-recipe-detail>
+    <app-recipe-detail *ngIf='current' [recipe]="current"></app-recipe-detail>
   </div>
 </div>
