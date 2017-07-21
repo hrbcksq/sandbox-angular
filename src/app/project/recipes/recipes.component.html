@@ -3,9 +3,9 @@
 </p>
 <div class="row">
   <div class="col-xs-5">
-    <app-recipe-list></app-recipe-list>
+    <app-recipe-list (onSelectionChange)="setCurrentRecipe($event)"></app-recipe-list>
   </div>
   <div class="col-xs-5">
-    <app-recipe-detail></app-recipe-detail>
+    <app-recipe-detail [recipe]="current"></app-recipe-detail>
   </div>
 </div>
