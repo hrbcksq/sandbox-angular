@@ -12,9 +12,28 @@ export class ShoppingListComponent implements OnInit {
     new Ingredient('Tomatoes', 10)
   ];
 
+  current: Ingredient;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onAdd(input: Ingredient) {
+    this.ingredients.push(input);
+  }
+  onDelete(input: Ingredient) {
+    const index = this.ingredients.indexOf(input);
+    if (index !== -1) {
+      this.ingredients.splice(index, 1);
+    }
+  }
+  onClear() {
+    this.ingredients = new Array<Ingredient>();
+  }
+
+  onSelection(input: Ingredient) {
+    this.current = input;
   }
 
 }
