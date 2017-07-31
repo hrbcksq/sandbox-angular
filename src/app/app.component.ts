@@ -7,11 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  private readonly NavigationType = Navigation;
-  currentNavigation: Navigation;
-
-  onNavigation(input: Navigation) {
-    this.currentNavigation = input;
-  }
-
+  numbers = [1, 2, 3, 4, 5];
+  oddNumbers = [1, 3, 5, 7];
+  evenNumbers = [2, 4, 6, 8];
+  onlyOdd = false;
 }

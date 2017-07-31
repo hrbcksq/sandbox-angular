@@ -1,18 +1,25 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
-      <app-header (onNavigationChange)='onNavigation($event)'></app-header>
-      <span [ngSwitch]="currentNavigation">
-            <p *ngSwitchCase="NavigationType.Recipes">
-                <app-recipes></app-recipes>
-            </p>
-            <p *ngSwitchCase="NavigationType.Shopping">
-                <app-shopping-list></app-shopping-list>
-            </p>
-            <p *ngSwitchDefault>
-                <!--<h3>Select a route</h3>-->
-            </p>
-        </span>
+      <button class="btn btn-primary" (click)="onlyOdd = !onlyOdd">Only show odd numbers</button>
+      <br><br>
+      <ul class="list-group">
+        <div *ngIf="onlyOdd; else evenTemplate">
+          <li class="list-group-item" *ngFor="let number of oddNumbers">
+            {{number}}
+          </li>
+        </div>
+        <ng-template #evenTemplate>
+          <li
+            class="list-group-item"
+            *ngFor="let number of evenNumbers">
+            {{number}}
+          </li>  
+        </ng-template>
+      </ul>
+      <ng-template [ngIf]="onlyOdd">
+        <p>Only odd</p>
+      </ng-template>
     </div>
   </div>
 </div>
