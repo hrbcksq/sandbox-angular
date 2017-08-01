@@ -1,3 +1,4 @@
+import { BasicHighlightDirective } from './directive/basic-hightlight.directive';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -13,6 +14,7 @@ import { ShoppingEditComponent } from './project/shopping-list/shopping-edit/sho
 
 @NgModule({
   declarations: [
+    BasicHighlightDirective,
     AppComponent,
     HeaderComponent,
     RecipesComponent,
