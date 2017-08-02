@@ -25,7 +25,7 @@
         <p [appReactiveHighlight] = "'red'" defaultColor="lightyellow" [highlightColor]="'lightgreen'" >App Reactive Highlight</p>
       </div>-->
 
-      <ng-template [ngIf]="onlyOdd">
+      <ng-template [appUnless]="!onlyOdd">
         <div>
           <p appBasicHighlight>App Basic Highlight</p>
           <p appBetterHighlight>App Better Highlight</p>
