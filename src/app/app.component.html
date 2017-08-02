@@ -31,6 +31,14 @@
           <p appBetterHighlight>App Better Highlight</p>
           <p [appReactiveHighlight]="'red'" defaultColor="lightyellow" [highlightColor]="'lightgreen'">App Reactive Highlight</p>
         </div>
+
+        <div [ngSwitch]="value">
+          <p *ngSwitchCase="1">One</p>
+          <p *ngSwitchCase="10">Ten</p>
+          <p *ngSwitchCase="100">Hundred</p>
+          <p *ngSwitchCase="1000">Thousand</p>
+          <p *ngSwitchDefault>Default</p>
+        </div>
     </div>
   </div>
 </div>
