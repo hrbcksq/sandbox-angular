@@ -29,7 +29,7 @@
       <ng-template [ngIf]="onlyOdd">
         <p appBasicHighlight>App Basic Highlight</p>
         <p appBetterHighlight>App Basic Highlight</p>
-        <p appReactiveHighlight>App Reactive Highlight</p>
+        <p [appReactiveHighlight] = "'red'" defaultColor="lightyellow" [highlightColor]="'lightgreen'" >App Reactive Highlight</p>
       </ng-template>
     </div>
   </div>
